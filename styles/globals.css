@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.jumbotron {
+  background: radial-gradient(
+    41.38% 68.65% at 36.49% 49.91%,
+    #cbd5e1 37.52%,
+    #f1f5f9 100%
+  );
+}
