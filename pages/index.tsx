@@ -44,12 +44,13 @@ const Home: NextPage = () => {
           </h2>
           <p className="mt-2">
             s simply dummy text of the printing and typesetting industry. Lorem
-            Ipsum has been the industry's standard dummy text ever since the
-            1500s, when an unknown printer took a galley of type and scrambled
-            it to make a type specimen book. s simply dummy text of the printing
-            and typesetting industry. Lorem Ipsum has been the industry's
-            standard dummy text ever since the 1500s, when an unknown printer
-            took a galley of type and scrambled it to make a type specimen book.
+            Ipsum has been the industry&apos;s standard dummy text ever since
+            the 1500s, when an unknown printer took a galley of type and
+            scrambled it to make a type specimen book. s simply dummy text of
+            the printing and typesetting industry. Lorem Ipsum has been the
+            industry&apos;s standard dummy text ever since the 1500s, when an
+            unknown printer took a galley of type and scrambled it to make a
+            type specimen book.
           </p>
         </div>
         <div className="mb-8 ml-0 lg:mt-0 md:ml-auto">
@@ -80,12 +81,13 @@ const Home: NextPage = () => {
           </h2>
           <p className="mt-2">
             s simply dummy text of the printing and typesetting industry. Lorem
-            Ipsum has been the industry's standard dummy text ever since the
-            1500s, when an unknown printer took a galley of type and scrambled
-            it to make a type specimen book. s simply dummy text of the printing
-            and typesetting industry. Lorem Ipsum has been the industry's
-            standard dummy text ever since the 1500s, when an unknown printer
-            took a galley of type and scrambled it to make a type specimen book.
+            Ipsum has been the industry&apos;s standard dummy text ever since
+            the 1500s, when an unknown printer took a galley of type and
+            scrambled it to make a type specimen book. s simply dummy text of
+            the printing and typesetting industry. Lorem Ipsum has been the
+            industry&apos;s standard dummy text ever since the 1500s, when an
+            unknown printer took a galley of type and scrambled it to make a
+            type specimen book.
           </p>
         </div>
       </div>
