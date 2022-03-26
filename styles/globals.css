@@ -5,7 +5,15 @@
 .jumbotron {
   background: radial-gradient(
     41.38% 68.65% at 36.49% 49.91%,
-    #cbd5e1 37.52%,
+    #ccfbf1 37.52%,
     #f1f5f9 100%
   );
+}
+
+.homepageCallout {
+  background: linear-gradient(89.85deg, #ccfbf1 -4.16%, #0d9488 102.59%);
+}
+
+.test {
+  box-shadow: 0px 10px 20px rgba(226, 232, 240, 0.5);
 }
