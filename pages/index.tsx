@@ -1,17 +1,17 @@
 import { NextPage } from 'next';
 import Image from 'next/image';
-import { RiBearSmileFill } from 'react-icons/ri';
 
-import Nav from '../src/components/layout/Nav/Nav';
+import Cards from 'src/components/Cards';
+import Nav from 'src/components/layout/Nav/Nav';
 
 const Home: NextPage = () => {
   return (
     <div>
       <div className="jumbotron">
         <Nav />
-        <div className="py-24 text-center mb-24 md:mb-60">
-          <div className="max-w-2xl mx-auto">
-            <h1 className="text-slate-900 font-semibold text-6xl mb-4 leading-tight">
+        <div className="mb-24 py-24 text-center md:mb-60">
+          <div className="mx-auto max-w-2xl">
+            <h1 className="mb-4 text-6xl font-semibold leading-tight text-slate-900">
               Memorable pieces you are guranteed to love
             </h1>
             <h2 className="text-2xl text-slate-600">
@@ -19,16 +19,16 @@ const Home: NextPage = () => {
             </h2>
           </div>
 
-          <div className="flex justify-center mt-16 space-x-16">
+          <div className="mt-16 flex justify-center space-x-16">
             <button
               type="button"
-              className="inline-flex items-center px-8 py-3 shadow-sm rounded-md text-white bg-black"
+              className="inline-flex items-center rounded-md bg-black px-8 py-3 text-white shadow-sm"
             >
               Browse gallery
             </button>
             <button
               type="button"
-              className="inline-flex items-center px-8 py-3 shadow-sm rounded-md text-black bg-white"
+              className="inline-flex items-center rounded-md bg-white px-8 py-3 text-black shadow-sm"
             >
               Contact
             </button>
@@ -36,9 +36,9 @@ const Home: NextPage = () => {
         </div>
       </div>
 
-      <div className="mb-24 grid grid-cols-1 items-center gap-4 md:mb-60 lg:grid-cols-2 max-w-5xl mx-auto">
+      <div className="mx-auto mb-24 grid max-w-5xl grid-cols-1 items-center gap-4 md:mb-60 lg:grid-cols-2">
         <div>
-          <h2 className="text-5xl font-semibold text-neutral-900 lg:text-left mb-4">
+          <h2 className="mb-4 text-5xl font-semibold text-neutral-900 lg:text-left">
             Hand-crafted and sewn pieces{' '}
             <span className="text-teal-600">designed for you.</span>
           </h2>
@@ -53,7 +53,7 @@ const Home: NextPage = () => {
             type specimen book.
           </p>
         </div>
-        <div className="mb-8 ml-0 lg:mt-0 md:ml-auto">
+        <div className="mb-8 ml-0 md:ml-auto lg:mt-0">
           <Image
             className="rounded-xl"
             src="/images/basket.jpg"
@@ -64,7 +64,7 @@ const Home: NextPage = () => {
         </div>
       </div>
 
-      <div className="mb-24 grid grid-cols-1 items-center gap-4 md:mb-60 lg:grid-cols-2 max-w-5xl mx-auto">
+      <div className="mx-auto mb-24 grid max-w-5xl grid-cols-1 items-center gap-4 md:mb-60 lg:grid-cols-2">
         <div className="mb-8 ml-0 lg:mt-0">
           <Image
             className="rounded-xl"
@@ -75,7 +75,7 @@ const Home: NextPage = () => {
           />
         </div>
         <div>
-          <h2 className="text-5xl font-semibold text-neutral-900 lg:text-left mb-4">
+          <h2 className="mb-4 text-5xl font-semibold text-neutral-900 lg:text-left">
             Hand-crafted and sewn pieces{' '}
             <span className="text-teal-600">designed for you.</span>
           </h2>
@@ -92,72 +92,22 @@ const Home: NextPage = () => {
         </div>
       </div>
 
-      <div className="mb-24 md:mb-60 max-w-5xl mx-auto">
-        <h2 className="text-5xl font-semibold text-neutral-900 lg:text-left mb-16">
-          Whatever you want...
-          <p className="text-teal-600">Preserve it</p>
-        </h2>
+      <Cards />
 
-        <div className="mb-24 grid grid-cols-1 sm:grid-cols-2 items-center gap-4 md:mb-60 lg:grid-cols-3">
-          <div className="test p-8 bg-slate-200 rounded-[40px]">
-            <p className="mx-auto mb-8 flex items-center justify-center text-center h-20 w-20 bg-white rounded-[20px] text-black">
-              <RiBearSmileFill size="40" />
-            </p>
-            <p className="text-lg text-slate-900">Memory bears</p>
-            <p>Custom-made bears from pieces you provide.</p>
-          </div>
-          <div className="test p-8 bg-slate-200 rounded-[40px]">
-            <p className="mx-auto mb-8 flex items-center justify-center text-center h-20 w-20 bg-white rounded-[20px] text-black">
-              <RiBearSmileFill size="40" />
-            </p>
-            <p className="text-lg text-slate-900">Memory bears</p>
-            <p>Custom-made bears from pieces you provide.</p>
-          </div>
-          <div className="test p-8 bg-slate-200 rounded-[40px]">
-            <p className="mx-auto mb-8 flex items-center justify-center text-center h-20 w-20 bg-white rounded-[20px] text-black">
-              <RiBearSmileFill size="40" />
-            </p>
-            <p className="text-lg text-slate-900">Memory bears</p>
-            <p>Custom-made bears from pieces you provide.</p>
-          </div>
-          <div className="test p-8 bg-slate-200 rounded-[40px]">
-            <p className="mx-auto mb-8 flex items-center justify-center text-center h-20 w-20 bg-white rounded-[20px] text-black">
-              <RiBearSmileFill size="40" />
-            </p>
-            <p className="text-lg text-slate-900">Memory bears</p>
-            <p>Custom-made bears from pieces you provide.</p>
-          </div>
-          <div className="test p-8 bg-slate-200 rounded-[40px]">
-            <p className="mx-auto mb-8 flex items-center justify-center text-center h-20 w-20 bg-white rounded-[20px] text-black">
-              <RiBearSmileFill size="40" />
-            </p>
-            <p className="text-lg text-slate-900">Memory bears</p>
-            <p>Custom-made bears from pieces you provide.</p>
-          </div>
-          <div className="test p-8 bg-slate-200 rounded-[40px]">
-            <p className="mx-auto mb-8 flex items-center justify-center text-center h-20 w-20 bg-white rounded-[20px] text-black">
-              <RiBearSmileFill size="40" />
-            </p>
-            <p className="text-lg text-slate-900">Memory bears</p>
-            <p>Custom-made bears from pieces you provide.</p>
-          </div>
-        </div>
-      </div>
-
-      <div className="homepageCallout mb-24 md:mb-60 max-w-5xl mx-auto rounded-[40px] p-16">
-        <h2 className="text-5xl font-semibold text-neutral-900 mb-16 max-w-2xl text-center mx-auto">
+      <div className="homepageCallout mx-auto mb-24 max-w-5xl rounded-[40px] p-16 md:mb-60">
+        <h2 className="mx-auto mb-16 max-w-2xl text-center text-5xl font-semibold text-neutral-900">
           Start creating your memory item today
         </h2>
-        <div className="flex justify-center mt-16 space-x-8">
+        <div className="mt-16 flex justify-center space-x-8">
           <button
             type="button"
-            className="inline-flex items-center px-8 py-3 shadow-sm rounded-md text-white bg-black"
+            className="inline-flex items-center rounded-md bg-black px-8 py-3 text-white shadow-sm"
           >
             Contact
           </button>
           <button
             type="button"
-            className="inline-flex items-center px-8 py-3 shadow-sm rounded-md text-black bg-white"
+            className="inline-flex items-center rounded-md bg-white px-8 py-3 text-black shadow-sm"
           >
             Learn more
           </button>

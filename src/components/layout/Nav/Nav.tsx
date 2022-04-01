@@ -11,12 +11,12 @@ const NavLink = ({ href, text }: NavLinkProps) => {
 
   useEffect(() => {
     if (window.location.pathname === href) setIsActive(true);
-  }, []);
+  }, [href]);
 
   return (
     <Link href={href} passHref>
       <a
-        className={`${isActive ? 'text-teal-600' : ''}  hover:text-slate-500`}
+        className={`${isActive ? 'text-teal-600' : 'hover:text-slate-500'}`}
         onClick={() => setIsActive(!isActive)}
       >
         {text}
@@ -27,11 +27,11 @@ const NavLink = ({ href, text }: NavLinkProps) => {
 
 export default function Nav() {
   return (
-    <nav className="max-w-screen-lg mx-auto flex justify-between px-4 lg:px-0 py-4">
+    <nav className="mx-auto flex max-w-screen-lg justify-between px-4 py-4 lg:px-0">
       <div>
         <Link href="/">Logo</Link>
       </div>
-      <div className="space-x-8 hidden sm:block">
+      <div className="hidden space-x-8 sm:block">
         <NavLink href="/products" text="Products" />
         <NavLink href="/gallery" text="Gallery" />
         <NavLink href="/forms" text="Forms" />
@@ -46,7 +46,7 @@ function MobileNav() {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="sm:hidden mr-2 inline-flex items-center focus:outline-none focus:ring-0 ">
+    <div className="mr-2 inline-flex items-center focus:outline-none focus:ring-0 sm:hidden ">
       <Popover.Root open={open} onOpenChange={() => setOpen(!open)}>
         <Popover.Trigger className="flex items-center rounded-md p-1.5 hover:bg-slate-200 hover:text-slate-900">
           {!open ? (

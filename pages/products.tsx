@@ -1,8 +1,10 @@
 import { useState } from 'react';
 import { NextPage } from 'next';
+import { motion } from 'framer-motion';
 
-import Container from '../src/components/layout/Container/Container';
-import PageHeading from '../src/components/shared/PageHeading';
+import Container from 'src/components/layout/Container/Container';
+import PageHeading from 'src/components/shared/PageHeading';
+import Tabs from 'src/components/ProductTabs';
 
 const Product: NextPage = () => {
   const [selectedTab, setSelectedTab] = useState('Memory bears');
@@ -17,8 +19,14 @@ const Product: NextPage = () => {
       <Tabs selectedTab={selectedTab} setSelectedTab={setSelectedTab} />
 
       {selectedTab === 'Memory bears' && (
-        <section className="bg-white p-16 rounded-[40px]">
-          <h2 className="mb-2 text-slate-900 text-4xl font-medium">
+        <motion.section
+          layout
+          style={{
+            justifySelf: 'center',
+          }}
+          className="rounded-[40px] bg-white p-16 shadow-lg"
+        >
+          <h2 className="mb-2 text-4xl font-medium text-slate-900">
             Memory bears
           </h2>
           <p className="mb-8">
@@ -28,7 +36,7 @@ const Product: NextPage = () => {
             do the rest!
           </p>
 
-          <h3 className="text-2xl font-medium text-slate-900 mb-2">About</h3>
+          <h3 className="mb-2 text-2xl font-medium text-slate-900">About</h3>
           <p className="mb-4">
             I make 15” and 18” bears with poseable arms and legs. I use buttons
             in the construction of the bears and for their eyes; therefore,
@@ -55,28 +63,28 @@ const Product: NextPage = () => {
             would like them used to embellish your bear(s).
           </p>
 
-          <h3 className="text-2xl font-medium text-slate-900 mb-2">Filling</h3>
+          <h3 className="mb-2 text-2xl font-medium text-slate-900">Filling</h3>
           <p className="mb-8">
             Bears are stuffed with100% polyester fiber fill.
           </p>
 
-          <h3 className="text-2xl font-medium text-slate-900 mb-2">
+          <h3 className="mb-2 text-2xl font-medium text-slate-900">
             Special information
           </h3>
           <p>Bears are stuffed with100% polyester fiber fill.</p>
-        </section>
+        </motion.section>
       )}
 
       {selectedTab === 'Memory blankets' && (
-        <section className="bg-white p-16 rounded-[40px]">
-          <h2 className="mb-2 text-slate-900 text-4xl font-medium">
+        <section className="rounded-[40px] bg-white p-16 shadow-lg">
+          <h2 className="mb-2 text-4xl font-medium text-slate-900">
             Memory blankets
           </h2>
           <p className="mb-8">
             Blankets are custom-made from material(s) you provide.
           </p>
 
-          <h3 className="text-2xl font-medium text-slate-900 mb-4">About</h3>
+          <h3 className="mb-4 text-2xl font-medium text-slate-900">About</h3>
           <p className="mb-4">
             You decide what size blanket you would like and what type of backing
             you would like on your blanket. See below to help you decide on a
@@ -96,7 +104,7 @@ const Product: NextPage = () => {
             printing on them or not. Blank squares add interest to a blanket.
           </p>
 
-          <h3 className="text-2xl font-medium text-slate-900 mb-2">
+          <h3 className="mb-2 text-2xl font-medium text-slate-900">
             Special information
           </h3>
           <p>
@@ -110,8 +118,8 @@ const Product: NextPage = () => {
       )}
 
       {selectedTab === 'Memory aprons' && (
-        <section className="bg-white p-16 rounded-[40px]">
-          <h2 className="mb-2 text-slate-900 text-4xl font-medium">
+        <section className="rounded-[40px] bg-white p-16 shadow-lg">
+          <h2 className="mb-2 text-4xl font-medium text-slate-900">
             Memory aprons
           </h2>
           <p className="mb-8">
@@ -119,7 +127,7 @@ const Product: NextPage = () => {
             love.
           </p>
 
-          <h3 className="text-2xl font-medium text-slate-900 mb-2">About</h3>
+          <h3 className="mb-2 text-2xl font-medium text-slate-900">About</h3>
           <p>
             Aprons are a great way to remember cooking with a special person. It
             is also fun to make an apron out of one of dad’s old shirts for your
@@ -133,52 +141,3 @@ const Product: NextPage = () => {
 };
 
 export default Product;
-
-type TabProps = {
-  selectedTab: string;
-  setSelectedTab: (tab: string) => void;
-};
-
-function Tabs({ selectedTab, setSelectedTab }: TabProps) {
-  const tabs = [
-    { name: 'Memory bears', selected: selectedTab === 'Memory bears' },
-    { name: 'Memory blankets', selected: selectedTab === 'Memory blankets' },
-    { name: 'Memory aprons', selected: selectedTab === 'Memory aprons' },
-  ];
-
-  return (
-    <div className="-mt-24 mb-24 flex justify-center">
-      <div className="sm:hidden">
-        <label htmlFor="tabs" className="sr-only">
-          Select a tab
-        </label>
-        <select
-          id="tabs"
-          name="tabs"
-          className="block w-full focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded"
-        >
-          {tabs.map(tab => (
-            <option key={tab.name}>{tab.name}</option>
-          ))}
-        </select>
-      </div>
-      <div className="hidden sm:block bg-white rounded-full p-1">
-        <nav className="flex space-x-4" aria-label="Tabs">
-          {tabs.map(tab => (
-            <button
-              key={tab.name}
-              className={`${
-                tab.selected
-                  ? 'bg-teal-100 text-teal-700'
-                  : 'hover:text-teal-600'
-              } px-3 py-2 font-medium text-sm rounded-full`}
-              onClick={() => setSelectedTab(tab.name)}
-            >
-              {tab.name}
-            </button>
-          ))}
-        </nav>
-      </div>
-    </div>
-  );
-}
