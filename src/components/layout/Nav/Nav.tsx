@@ -1,18 +1,41 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import * as Popover from '@radix-ui/react-popover';
 
+type NavLinkProps = {
+  href: string;
+  text: string;
+};
+const NavLink = ({ href, text }: NavLinkProps) => {
+  const [isActive, setIsActive] = useState(false);
+
+  useEffect(() => {
+    if (window.location.pathname === href) setIsActive(true);
+  }, []);
+
+  return (
+    <Link href={href} passHref>
+      <a
+        className={`${isActive ? 'text-teal-600' : ''}  hover:text-slate-500`}
+        onClick={() => setIsActive(!isActive)}
+      >
+        {text}
+      </a>
+    </Link>
+  );
+};
+
 export default function Nav() {
   return (
-    <nav className="max-w-5xl mx-auto flex justify-between px-4 lg:px-0 py-4">
+    <nav className="max-w-screen-lg mx-auto flex justify-between px-4 lg:px-0 py-4">
       <div>
         <Link href="/">Logo</Link>
       </div>
       <div className="space-x-8 hidden sm:block">
-        <Link href="/">Products</Link>
-        <Link href="/">Gallery</Link>
-        <Link href="/">Forms</Link>
-        <Link href="/">Contact</Link>
+        <NavLink href="/products" text="Products" />
+        <NavLink href="/gallery" text="Gallery" />
+        <NavLink href="/forms" text="Forms" />
+        <NavLink href="/contact" text="Contact" />
       </div>
       <MobileNav />
     </nav>

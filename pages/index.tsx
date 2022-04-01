@@ -1,8 +1,8 @@
-import type { NextPage } from 'next';
+import { NextPage } from 'next';
 import Image from 'next/image';
 import { RiBearSmileFill } from 'react-icons/ri';
 
-import Nav from '../src/components/Nav/Nav';
+import Nav from '../src/components/layout/Nav/Nav';
 
 const Home: NextPage = () => {
   return (
@@ -10,8 +10,8 @@ const Home: NextPage = () => {
       <div className="jumbotron">
         <Nav />
         <div className="py-24 text-center mb-24 md:mb-60">
-          <div className="max-w-xl mx-auto">
-            <h1 className="text-slate-900 font-semibold text-5xl mb-4 leading-tight">
+          <div className="max-w-2xl mx-auto">
+            <h1 className="text-slate-900 font-semibold text-6xl mb-4 leading-tight">
               Memorable pieces you are guranteed to love
             </h1>
             <h2 className="text-2xl text-slate-600">
