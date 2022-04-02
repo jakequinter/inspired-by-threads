@@ -14,7 +14,7 @@ export default function Tabs({ selectedTab, setSelectedTab }: Props) {
 
   return (
     <div className="-mt-12 mb-12 flex justify-center md:-mt-24 md:mb-24">
-      <div className="rounded bg-white py-2 px-3 shadow sm:hidden">
+      <div className="sm:hidden">
         <label htmlFor="tabs" className="sr-only">
           Select a tab
         </label>
@@ -22,7 +22,7 @@ export default function Tabs({ selectedTab, setSelectedTab }: Props) {
         <select
           id="tabs"
           name="tabs"
-          className="block w-full rounded-md border-slate-200 pr-10 text-sm focus:outline-none"
+          className="block w-full rounded-md border-slate-200 pr-10 text-sm shadow focus:outline-none"
           onChange={e => setSelectedTab(e.target.value)}
         >
           {tabs.map(tab => (
