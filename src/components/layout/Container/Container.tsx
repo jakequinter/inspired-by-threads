@@ -15,7 +15,7 @@ export default function Container({
       <Nav />
 
       <main
-        className={`${maxScreenSize} mx-auto mt-24 mb-36 px-4 md:px-0`}
+        className={`${maxScreenSize} mx-auto mt-24 mb-36 px-4 lg:px-0`}
         style={{ minHeight: 'calc(100vh - 350px)' }}
       >
         {children}
