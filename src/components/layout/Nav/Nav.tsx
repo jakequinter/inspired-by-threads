@@ -48,7 +48,10 @@ function MobileNav() {
   return (
     <div className="mr-2 inline-flex items-center focus:outline-none focus:ring-0 sm:hidden ">
       <Popover.Root open={open} onOpenChange={() => setOpen(!open)}>
-        <Popover.Trigger className="flex items-center rounded-md p-1.5 hover:bg-slate-200 hover:text-slate-900">
+        <Popover.Trigger
+          onClick={() => setOpen(!open)}
+          className="flex items-center rounded-md p-1.5 hover:bg-slate-200 hover:text-slate-900"
+        >
           {!open ? (
             <svg width="20" height="20" fill="none" viewBox="0 0 24 24">
               <path
