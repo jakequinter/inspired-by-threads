@@ -9,7 +9,6 @@ import 'swiper/css/pagination';
 const galleryData = [
   {
     id: 1,
-    type: 'Pillow',
     images: [
       { id: 1, path: '/images/gallery/packers/tshirt1.jpg' },
       { id: 2, path: '/images/gallery/packers/tshirt2.jpg' },
@@ -19,7 +18,6 @@ const galleryData = [
   },
   {
     id: 2,
-    type: 'Pillow',
     images: [
       { id: 1, path: '/images/gallery/cruise/tshirt1.jpg' },
       { id: 2, path: '/images/gallery/cruise/tshirt2.jpg' },
@@ -29,7 +27,6 @@ const galleryData = [
   },
   {
     id: 3,
-    type: 'Pillow',
     images: [
       { id: 1, path: '/images/gallery/helping-hands/tshirt1.jpg' },
       { id: 2, path: '/images/gallery/helping-hands/tshirt2.jpg' },
