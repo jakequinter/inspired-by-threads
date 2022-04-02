@@ -25,6 +25,11 @@
 /*
   Swiper styles
 */
+.swiper {
+  height: 100%;
+  width: 100%;
+  background-color: #f8fafc;
+}
 .swiper-container, .swiper-wrapper {
   display: inherit;
 } 
@@ -56,26 +61,32 @@
 }
 
 .swiper-button-prev,
+.swiper-button-next,
 .swiper-button-prev::after,
-.swiper-button-next, 
 .swiper-button-next::after {
   opacity: 0;
 }
 
-.swiper:hover > .swiper-button-prev,
-.swiper:hover > .swiper-button-prev::after,
-.swiper:hover >.swiper-button-next,
-.swiper:hover >.swiper-button-next::after {
-  opacity: 1;
-  background-color: #fff;
-  border-radius: 99999px;
-  color: #0f172a;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 12px;
-  width: 35px;
-  height: 35px;
+@media screen and (min-width: 500px) {
+  .swiper:hover .swiper-button-prev,
+  .swiper:hover .swiper-button-prev::after,
+  .swiper:hover .swiper-button-next,
+  .swiper:hover .swiper-button-next::after {
+    opacity: 1;
+    background-color: #fff;
+    border-radius: 99999px;
+    color: #0f172a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    width: 30px;
+    height: 30px;
+  } 
+}
+
+.swiper:hover .swiper-button-disabled {
+  opacity: 0;
 }
 
 
