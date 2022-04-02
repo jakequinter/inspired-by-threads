@@ -14,7 +14,7 @@ const Home: NextPage = () => {
             <h1 className="mb-4 text-6xl font-semibold leading-tight text-slate-900">
               Memorable pieces you are guranteed to love
             </h1>
-            <h2 className="text-2xl text-slate-600">
+            <h2 className="flex items-center justify-center text-2xl">
               Memories are timeless treasures of the heart ❤️
             </h2>
           </div>
