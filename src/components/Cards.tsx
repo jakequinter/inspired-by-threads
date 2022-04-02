@@ -47,7 +47,7 @@ const cardData = [
 export default function Cards() {
   return (
     <div className="mx-auto mb-24 max-w-5xl md:mb-60">
-      <h2 className="mb-16 text-5xl font-semibold text-neutral-900 lg:text-left">
+      <h2 className="mb-4 text-3xl font-semibold text-neutral-900 md:text-5xl lg:text-left">
         Whatever you want...
         <p className="text-teal-600">Preserve it</p>
       </h2>

@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { RiFacebookCircleFill } from 'react-icons/ri';
 
 export default function Footer() {
   return (
@@ -8,6 +9,11 @@ export default function Footer() {
         <div className="space-x-8">
           <Link href="/privacy">Privacy</Link>
           <Link href="/legal">Legal</Link>
+          <Link href="/legal" passHref>
+            <a>
+              <RiFacebookCircleFill className="inline h-5 w-5 text-[#4267B2]" />
+            </a>
+          </Link>
         </div>
       </div>
     </footer>
