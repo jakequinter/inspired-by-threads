@@ -101,22 +101,22 @@ function MobileNav() {
           align="end"
           alignOffset={12}
         >
-          <Link href="/" passHref>
+          <Link href="/products" passHref>
             <a className="inline-flex items-center p-2 hover:text-teal-500">
               Products
             </a>
           </Link>
-          <Link href="/" passHref>
+          <Link href="/gallery" passHref>
             <a className="inline-flex items-center p-2 hover:text-teal-500">
               Gallery
             </a>
           </Link>
-          <Link href="/" passHref>
+          <Link href="/forms" passHref>
             <a className="inline-flex items-center p-2 hover:text-teal-500">
               Forms
             </a>
           </Link>
-          <Link href="/" passHref>
+          <Link href="/contact" passHref>
             <a className="inline-flex items-center p-2 hover:text-teal-500">
               Contact
             </a>
