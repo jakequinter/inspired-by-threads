@@ -61,9 +61,9 @@ const Home: NextPage = () => {
               <span className="text-teal-600">designed for you.</span>
             </h2>
             <p className="mt-2">
-              Maybe it&apos;s preserving your childs first outfit. Maybe you
-              want to preservce your wedding dress. Or maybe it&apos;s your
-              daughter&apos;s prom dress or your son&apos;s football jersey.
+              Maybe you want to preserve your wedding dress or your
+              daughter&apos;s prom dress. Possibly it&apos;s preserving your
+              childs first outfit or your son&apos;s football jersey.
             </p>
             <p className="mt-2">
               Whatever it is, we&apos;ve got you covered. The options and
@@ -163,7 +163,7 @@ const Home: NextPage = () => {
             </h2>
             <p className="mt-2">
               One of the many gifts God has given me is sewing. I have been
-              sewing memory pillows, bears, blankets, aprons, and potholder for
+              sewing memory pillows, bears, blankets, aprons, and potholders for
               friends and family for years.
               <p className="mt-2">
                 The Holy Spirit is guiding me to share my gift with even more

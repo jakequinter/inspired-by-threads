@@ -7,7 +7,7 @@ export default function gallery() {
     <Container>
       <PageHeading
         title="Gallery"
-        secondaryText="View past memorable items for inspiration"
+        secondaryText="Feel free to take a look at some memory items I've made"
       />
 
       <Gallery />

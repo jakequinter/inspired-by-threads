@@ -99,7 +99,10 @@ const Product: NextPage = () => {
           <h3 className="mb-2 text-2xl font-medium text-slate-900">
             Special information
           </h3>
-          <p>Bears are stuffed with100% polyester fiber fill.</p>
+          <p>
+            I&apos;m here to help you preserve your memories and keep them
+            close.
+          </p>
         </section>
       )}
 
