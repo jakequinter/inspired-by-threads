@@ -29,23 +29,6 @@ export default function Tabs({ selectedTab, setSelectedTab }: Props) {
 
   return (
     <div className="-mt-12 mb-12 flex justify-center md:-mt-24 md:mb-24">
-      {/* <div className="sm:hidden">
-        <label htmlFor="tabs" className="sr-only">
-          Select a tab
-        </label>
-        <select
-          id="tabs"
-          name="tabs"
-          className="block w-full rounded-md border-slate-200 pr-10 text-sm shadow focus:outline-none"
-          onChange={e => setSelectedTab(e.target.value)}
-        >
-          {tabs.map(tab => (
-            <option key={tab.name} onSelect={() => setSelectedTab(tab.name)}>
-              {tab.name}
-            </option>
-          ))}
-        </select>
-      </div> */}
       <div className="z-0 rounded-full bg-white p-1 shadow">
         <nav className="flex space-x-4" aria-label="Tabs">
           {tabs.map(tab => (

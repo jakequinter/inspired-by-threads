@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { FiHeart } from 'react-icons/fi';
 
 import Cards from 'src/components/Cards';
+import Footer from 'src/components/layout/Footer/Footer';
 import Nav from 'src/components/layout/Nav/Nav';
 
 const Home: NextPage = () => {
@@ -115,6 +116,8 @@ const Home: NextPage = () => {
           </div>
         </div>
       </div>
+
+      <Footer />
     </div>
   );
 };
