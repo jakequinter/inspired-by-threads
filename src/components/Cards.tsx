@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import { BiBlanket } from 'react-icons/bi';
 import { FiCamera } from 'react-icons/fi';
 import { HiOutlineLightBulb } from 'react-icons/hi';
@@ -56,7 +57,10 @@ export default function Cards() {
 
       <div className="mb-24 grid grid-cols-1 items-center gap-4 sm:grid-cols-2 md:mb-60 lg:grid-cols-3">
         {cardData.map(card => (
-          <div
+          <motion.div
+            whileHover={{
+              scale: 1.05,
+            }}
             key={card.id}
             className="cardShadow rounded-[40px] bg-slate-200 p-8"
           >
@@ -65,7 +69,7 @@ export default function Cards() {
             </p>
             <p className="text-lg text-slate-900">{card.title}</p>
             <p>{card.description}</p>
-          </div>
+          </motion.div>
         ))}
       </div>
     </div>

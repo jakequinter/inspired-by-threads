@@ -1,7 +1,8 @@
 import { NextPage } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
-import { FiHeart } from 'react-icons/fi';
+import { motion } from 'framer-motion';
+import { FiArrowRight, FiHeart } from 'react-icons/fi';
 import { RiNumber1, RiNumber2, RiNumber3, RiNumber4 } from 'react-icons/ri';
 
 import Cards from 'src/components/Cards';
@@ -9,6 +10,12 @@ import Footer from 'src/components/layout/Footer/Footer';
 import Nav from 'src/components/layout/Nav/Nav';
 
 const Home: NextPage = () => {
+  const iconVariants = {
+    hover: {
+      x: 2,
+    },
+  };
+
   return (
     <div>
       <div className="jumbotron">
@@ -25,16 +32,22 @@ const Home: NextPage = () => {
             </h2>
           </div>
 
-          <div className="mt-16 flex justify-center space-x-8">
+          <div className="mt-16 flex justify-center space-x-8 xs:space-x-16">
             <Link href="/gallery" passHref>
-              <a className="inline-flex items-center rounded-md bg-black px-3 py-1.5 text-white shadow-sm xs:px-8 xs:py-3">
+              <a className="inline-flex items-center rounded-md bg-black px-3 py-1.5 text-white shadow-sm hover:opacity-80 xs:px-8 xs:py-3">
                 Browse gallery
               </a>
             </Link>
             <Link href="/contact" passHref>
-              <a className="inline-flex items-center rounded-md bg-white px-5 py-2 text-black shadow-sm xs:px-8 xs:py-3">
+              <motion.div
+                whileHover="hover"
+                className="inline-flex cursor-pointer items-center rounded-md text-black"
+              >
                 Contact
-              </a>
+                <motion.span variants={iconVariants}>
+                  <FiArrowRight className="ml-2 inline text-black" />
+                </motion.span>
+              </motion.div>
             </Link>
           </div>
         </div>
@@ -168,14 +181,20 @@ const Home: NextPage = () => {
           </h2>
           <div className="mt-16 flex justify-center space-x-8">
             <Link href="/contact" passHref>
-              <a className="inline-flex items-center rounded-md bg-black px-3 py-1.5 text-white shadow-sm xs:px-8 xs:py-3">
+              <a className="inline-flex items-center rounded-md bg-black px-3 py-1.5 text-white shadow-sm hover:opacity-80 xs:px-8 xs:py-3">
                 Contact
               </a>
             </Link>
             <Link href="/products" passHref>
-              <a className="inline-flex items-center rounded-md bg-white px-5 py-2 text-black shadow-sm xs:px-8 xs:py-3">
+              <motion.div
+                whileHover="hover"
+                className="inline-flex cursor-pointer items-center rounded-md text-black"
+              >
                 Learn more
-              </a>
+                <motion.span variants={iconVariants}>
+                  <FiArrowRight className="ml-2 inline text-black" />
+                </motion.span>
+              </motion.div>
             </Link>
           </div>
         </div>

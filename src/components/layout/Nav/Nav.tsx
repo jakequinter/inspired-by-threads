@@ -5,8 +5,9 @@ import * as Popover from '@radix-ui/react-popover';
 type NavLinkProps = {
   href: string;
   text: string;
+  isMobile?: boolean;
 };
-const NavLink = ({ href, text }: NavLinkProps) => {
+const NavLink = ({ href, text, isMobile = false }: NavLinkProps) => {
   const [isActive, setIsActive] = useState(false);
 
   useEffect(() => {
@@ -16,7 +17,15 @@ const NavLink = ({ href, text }: NavLinkProps) => {
   return (
     <Link href={href} passHref>
       <a
-        className={`${isActive ? 'text-teal-600' : 'hover:text-slate-500'}`}
+        className={`${
+          isActive
+            ? 'text-teal-600 hover:text-teal-600'
+            : 'hover:text-slate-500'
+        } ${
+          isMobile
+            ? 'inline-flex items-center px-4 py-2 hover:text-slate-500'
+            : ''
+        }`}
         onClick={() => setIsActive(!isActive)}
       >
         {text}
@@ -46,7 +55,7 @@ function MobileNav() {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="mr-2 inline-flex items-center focus:outline-none focus:ring-0 sm:hidden ">
+    <div className="mr-2 inline-flex items-center focus:outline-none focus:ring-0 sm:hidden">
       <Popover.Root open={open} onOpenChange={() => setOpen(!open)}>
         <Popover.Trigger
           onClick={() => setOpen(!open)}
@@ -97,30 +106,14 @@ function MobileNav() {
         </Popover.Trigger>
         <Popover.Anchor />
         <Popover.Content
-          className="mt-6 flex w-40 flex-col rounded-lg border border-neutral-200 bg-white shadow outline-none focus:ring-0"
+          className="mt-6 flex w-60 flex-col rounded-lg border border-neutral-200 bg-white shadow outline-none focus:ring-0"
           align="end"
           alignOffset={12}
         >
-          <Link href="/products" passHref>
-            <a className="inline-flex items-center p-2 hover:text-teal-500">
-              Products
-            </a>
-          </Link>
-          <Link href="/gallery" passHref>
-            <a className="inline-flex items-center p-2 hover:text-teal-500">
-              Gallery
-            </a>
-          </Link>
-          <Link href="/forms" passHref>
-            <a className="inline-flex items-center p-2 hover:text-teal-500">
-              Forms
-            </a>
-          </Link>
-          <Link href="/contact" passHref>
-            <a className="inline-flex items-center p-2 hover:text-teal-500">
-              Contact
-            </a>
-          </Link>
+          <NavLink isMobile href="/products" text="Products" />
+          <NavLink isMobile href="/gallery" text="Gallery" />
+          <NavLink isMobile href="/forms" text="Forms" />
+          <NavLink isMobile href="/contact" text="Contact" />
         </Popover.Content>
       </Popover.Root>
     </div>
