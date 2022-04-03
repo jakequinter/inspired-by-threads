@@ -93,7 +93,7 @@ const Product: NextPage = () => {
 
           <h3 className="mb-2 text-2xl font-medium text-slate-900">Filling</h3>
           <p className="mb-8">
-            Bears are stuffed with100% polyester fiber fill.
+            Bears are stuffed with 100% polyester fiber fill.
           </p>
 
           <h3 className="mb-2 text-2xl font-medium text-slate-900">

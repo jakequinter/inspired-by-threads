@@ -35,8 +35,7 @@ const cardData = [
   {
     id: 5,
     title: 'Attachments',
-    description:
-      'Include photos, receipes, poems, and more in your memory item.',
+    description: 'Include photos, recipe, poems, and more in your memory item.',
     icon: <FiCamera size="40" />,
   },
   {
