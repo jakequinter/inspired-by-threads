@@ -40,7 +40,7 @@ export default function Gallery() {
   return (
     <ul
       role="list"
-      className="grid grid-cols-1 gap-x-4 gap-y-8 xs:grid-cols-2 sm:grid-cols-3 sm:gap-x-6 lg:grid-cols-4 xl:gap-x-8"
+      className="grid grid-cols-1 gap-4 xs:grid-cols-2 sm:gap-6 md:grid-cols-3 lg:gap-8"
     >
       {galleryData.map(gallery => (
         <li key={gallery.id} className="relative">
@@ -55,8 +55,8 @@ export default function Gallery() {
               {gallery.images.map(image => (
                 <SwiperSlide key={image.id}>
                   <Image
-                    height="400"
-                    width="300"
+                    height="600"
+                    width="450"
                     src={image.path}
                     alt="gallery"
                   />

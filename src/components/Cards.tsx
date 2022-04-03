@@ -1,8 +1,9 @@
 import React from 'react';
 import { BiBlanket } from 'react-icons/bi';
-import { FiCheckCircle } from 'react-icons/fi';
-import { GiChefToque, GiPillow } from 'react-icons/gi';
-import { RiBearSmileFill } from 'react-icons/ri';
+import { FiCamera } from 'react-icons/fi';
+import { HiOutlineLightBulb } from 'react-icons/hi';
+import { IoBedOutline, IoShirtOutline } from 'react-icons/io5';
+import { RiBearSmileLine } from 'react-icons/ri';
 // import cardData from './cardData';
 
 const cardData = [
@@ -10,7 +11,7 @@ const cardData = [
     id: 1,
     title: 'Memory bears',
     description: 'Custom-made bears from pieces you provide.',
-    icon: <RiBearSmileFill size="40" />,
+    icon: <RiBearSmileLine size="40" />,
   },
   {
     id: 2,
@@ -22,32 +23,33 @@ const cardData = [
     id: 3,
     title: 'Memory pillows',
     description: 'Sleep easy with a remembrance pillow on your bed.',
-    icon: <GiPillow size="40" />,
+    icon: <IoBedOutline size="40" />,
   },
   {
     id: 4,
     title: 'Memory aprons',
     description: 'Remember cooking with a special someone with an apron.',
-    icon: <GiChefToque size="40" />,
+    icon: <IoShirtOutline size="40" />,
   },
   {
     id: 5,
-    title: 'Memory aprons',
-    description: 'Remember cooking with a special someone with an apron.',
-    icon: <GiChefToque size="40" />,
+    title: 'Attachments',
+    description:
+      'Include photos, receipes, poems, and more in your memory item.',
+    icon: <FiCamera size="40" />,
   },
   {
     id: 6,
-    title: 'And more...',
+    title: 'Your idea here',
     description: 'Have a different idea? We can make it for you.',
-    icon: <FiCheckCircle size="40" />,
+    icon: <HiOutlineLightBulb size="40" />,
   },
 ];
 
 export default function Cards() {
   return (
     <div className="mx-auto mb-24 max-w-5xl md:mb-60">
-      <h2 className="mb-4 text-3xl font-semibold text-neutral-900 md:text-5xl lg:text-left">
+      <h2 className="mb-4 text-3xl font-semibold text-neutral-900 sm:text-4xl lg:text-left lg:text-5xl">
         Whatever you want...
         <p className="text-teal-600">Preserve it</p>
       </h2>

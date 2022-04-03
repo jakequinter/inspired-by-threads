@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { BiBlanket } from 'react-icons/bi';
-import { GiChefToque } from 'react-icons/gi';
-import { RiBearSmileFill } from 'react-icons/ri';
+import { IoShirtOutline } from 'react-icons/io5';
+import { RiBearSmileLine } from 'react-icons/ri';
 
 type Props = {
   selectedTab: string;
@@ -13,7 +13,7 @@ export default function Tabs({ selectedTab, setSelectedTab }: Props) {
     {
       name: 'Memory bears',
       selected: selectedTab === 'Memory bears',
-      icon: <RiBearSmileFill className="mr-0 h-6 w-6 sm:mr-4" />,
+      icon: <RiBearSmileLine className="mr-0 h-6 w-6 sm:mr-4" />,
     },
     {
       name: 'Memory blankets',
@@ -23,7 +23,7 @@ export default function Tabs({ selectedTab, setSelectedTab }: Props) {
     {
       name: 'Memory aprons',
       selected: selectedTab === 'Memory aprons',
-      icon: <GiChefToque className="mr-0 h-6 w-6 sm:mr-4" />,
+      icon: <IoShirtOutline className="mr-0 h-6 w-6 sm:mr-4" />,
     },
   ];
 
