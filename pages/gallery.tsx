@@ -1,5 +1,5 @@
 import Container from 'src/components/layout/Container/Container';
-import Gallery from 'src/components/Gallery';
+import Gallery from 'src/components/Gallery/Gallery';
 import PageHeading from 'src/components/shared/PageHeading';
 
 export default function gallery() {
