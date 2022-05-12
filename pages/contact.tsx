@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import Link from 'next/link';
 import toast, { Toaster } from 'react-hot-toast';
 import { useForm } from 'react-hook-form';
 
@@ -53,6 +54,17 @@ export default function Contact() {
         title="Contact us"
         secondaryText="Need help? Feel free to send us a message!"
       />
+
+      <div className="-mt-20 mb-12 flex justify-center md:-mt-40 md:mb-24">
+        <Link href="https://facebook.com/InspiredbyThreads" passHref>
+          <a
+            type="button"
+            className="btn-grad inline-flex items-center rounded-full border border-transparent px-6 py-3 text-base font-medium text-white shadow-sm  focus:outline-none focus:ring-0"
+          >
+            Check us out on Facebook
+          </a>
+        </Link>
+      </div>
 
       <div className="relative mx-auto max-w-screen-md">
         <form action="#" method="POST" onSubmit={handleSubmit(onSubmit)}>

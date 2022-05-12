@@ -43,7 +43,6 @@ export default function Nav() {
       <div className="hidden space-x-8 sm:block">
         <NavLink href="/products" text="Products" />
         <NavLink href="/gallery" text="Gallery" />
-        <NavLink href="/forms" text="Forms" />
         <NavLink href="/contact" text="Contact" />
       </div>
       <MobileNav />
@@ -112,7 +111,6 @@ function MobileNav() {
         >
           <NavLink isMobile href="/products" text="Products" />
           <NavLink isMobile href="/gallery" text="Gallery" />
-          <NavLink isMobile href="/forms" text="Forms" />
           <NavLink isMobile href="/contact" text="Contact" />
         </Popover.Content>
       </Popover.Root>

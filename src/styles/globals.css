@@ -109,3 +109,15 @@ body {
 .swiper-pagination-bullet, .swiper-pagination-bullet-active {
   background-color: #e2e8f0 !important;
 }
+
+         
+.btn-grad {
+  background-image: linear-gradient(to right, #115e59 0%, #0d9488  51%, #115e59  100%);
+  transition: 0.5s;
+  background-size: 200% auto;
+}
+
+.btn-grad:hover {
+  background-position: right center; /* change the direction of the change here */
+  text-decoration: none;
+}

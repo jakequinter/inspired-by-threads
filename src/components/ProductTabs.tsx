@@ -11,18 +11,18 @@ type Props = {
 export default function Tabs({ selectedTab, setSelectedTab }: Props) {
   const tabs = [
     {
-      name: 'Memory bears',
-      selected: selectedTab === 'Memory bears',
+      name: 'Bears',
+      selected: selectedTab === 'Bears',
       icon: <RiBearSmileLine className="mr-0 h-6 w-6 sm:mr-4" />,
     },
     {
-      name: 'Memory blankets',
-      selected: selectedTab === 'Memory blankets',
+      name: 'Blankets',
+      selected: selectedTab === 'Blankets',
       icon: <BiBlanket className="mr-0 h-6 w-6 sm:mr-4" />,
     },
     {
-      name: 'Memory aprons',
-      selected: selectedTab === 'Memory aprons',
+      name: 'Aprons',
+      selected: selectedTab === 'Aprons',
       icon: <IoShirtOutline className="mr-0 h-6 w-6 sm:mr-4" />,
     },
   ];

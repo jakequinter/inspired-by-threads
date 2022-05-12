@@ -125,8 +125,8 @@ const Home: NextPage = () => {
               </p>
               <p className="text-center">
                 <p className="mx-auto max-w-xs">
-                  Fill out an order form and mail it with your items and a
-                  check.
+                  Mail your items and a check. Inside the box, please include a
+                  piece of paper with your contact information.
                 </p>
               </p>
             </div>

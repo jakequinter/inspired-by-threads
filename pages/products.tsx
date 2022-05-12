@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import { NextPage } from 'next';
+import Image from 'next/image';
+import Link from 'next/link';
 import { FiAlertTriangle, FiInfo } from 'react-icons/fi';
 
 import Callout from 'src/components/shared/Callout';
@@ -41,7 +43,7 @@ const blanketSizes = [
 ];
 
 const Product: NextPage = () => {
-  const [selectedTab, setSelectedTab] = useState('Memory bears');
+  const [selectedTab, setSelectedTab] = useState('Bears');
 
   return (
     <Container maxScreenSize="max-w-screen-md">
@@ -52,7 +54,7 @@ const Product: NextPage = () => {
 
       <Tabs selectedTab={selectedTab} setSelectedTab={setSelectedTab} />
 
-      {selectedTab === 'Memory bears' && (
+      {selectedTab === 'Bears' && (
         <section className="rounded-[40px] bg-white p-8 shadow-lg md:p-16">
           <h2 className="mb-2 text-4xl font-medium text-slate-900">
             Memory bears
@@ -99,14 +101,35 @@ const Product: NextPage = () => {
           <h3 className="mb-2 text-2xl font-medium text-slate-900">
             Special information
           </h3>
-          <p>
+          <p className="mb-8">
             I&apos;m here to help you preserve your memories and keep them
             close.
+          </p>
+
+          <h3 className="mb-2 text-2xl font-medium text-slate-900">Pricing</h3>
+          <p className="mb-2">
+            Bears come in 15&quot; or 18&quot; sizes and require hours to
+            design, sew, and stuff. These memory bears start at $75.00, but the
+            price can fluctuate depending on the type of material and the number
+            of garments incorporated into each bear.
+          </p>
+          <p>
+            If you have any further questions, or would like a more detailed
+            estimate, please
+            <Link href="/contact" passHref>
+              <a>
+                <span className="cursor-pointer text-blue-500 underline hover:opacity-80">
+                  {' '}
+                  send me an email
+                </span>
+                .
+              </a>
+            </Link>
           </p>
         </section>
       )}
 
-      {selectedTab === 'Memory blankets' && (
+      {selectedTab === 'Blankets' && (
         <section className="rounded-[40px] bg-white p-8 shadow-lg md:p-16">
           <h2 className="mb-2 text-4xl font-medium text-slate-900">
             Memory blankets
@@ -200,17 +223,48 @@ const Product: NextPage = () => {
           <h3 className="mb-2 text-2xl font-medium text-slate-900">
             Special information
           </h3>
-          <p>
+          <p className="mb-2">
             I do not add batting to our blankets, and I do not quilt them. They
             are designed this way for year-round comfort. My favorite blanket is
             the lap blanket, it is a good size to snuggle with while reading a
             book, relaxing on the couch, or taking with you to watch favorite
             sporting event.
           </p>
+
+          <div className="mb-8 flex justify-center">
+            <Image
+              className="rounded"
+              src="/images/blanketinfo.jpg"
+              height="475"
+              width="400"
+              alt="Blanket information describing the differences between fabrics"
+            />
+          </div>
+
+          <h3 className="mb-2 text-2xl font-medium text-slate-900">Pricing</h3>
+          <p className="mb-2">
+            I make two different types of blankets (collage and block style)
+            which are both priced at $5 per block, plus backing. Collage style
+            blankets are an additional $50 for the design, and backing usually
+            varies between $11-$25 per yard.
+          </p>
+          <p>
+            If you have any further questions, or would like a more detailed
+            estimate, please
+            <Link href="/contact" passHref>
+              <a>
+                <span className="cursor-pointer text-blue-500 underline hover:opacity-80">
+                  {' '}
+                  send me an email
+                </span>
+                .
+              </a>
+            </Link>
+          </p>
         </section>
       )}
 
-      {selectedTab === 'Memory aprons' && (
+      {selectedTab === 'Aprons' && (
         <section className="rounded-[40px] bg-white p-8 shadow-lg md:p-16">
           <h2 className="mb-2 text-4xl font-medium text-slate-900">
             Memory aprons
@@ -221,11 +275,29 @@ const Product: NextPage = () => {
           </p>
 
           <h3 className="mb-2 text-2xl font-medium text-slate-900">About</h3>
-          <p className="mb-4">
+          <p className="mb-8">
             Aprons are a great way to remember cooking with a special person. It
             is also fun to make an apron out of one of dad’s old shirts for your
             daughter to use in her first apartment. Daddy’s girls love to have a
             hug from daddy anytime and while cooking is a great time for a hug!
+          </p>
+
+          <h3 className="mb-2 text-2xl font-medium text-slate-900">Pricing</h3>
+          <p className="mb-2">
+            Aprons start at $35, but can fluctuate depending on material.
+          </p>
+          <p className="mb-8">
+            If you have any further questions, or would like a more detailed
+            estimate, please
+            <Link href="/contact" passHref>
+              <a>
+                <span className="cursor-pointer text-blue-500 underline hover:opacity-80">
+                  {' '}
+                  send me an email
+                </span>
+                .
+              </a>
+            </Link>
           </p>
 
           <Callout
