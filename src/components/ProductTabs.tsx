@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { BiBlanket } from 'react-icons/bi';
+import { GiCookingGlove } from 'react-icons/gi';
 import { IoShirtOutline } from 'react-icons/io5';
 import { RiBearSmileLine } from 'react-icons/ri';
 
@@ -24,6 +25,11 @@ export default function Tabs({ selectedTab, setSelectedTab }: Props) {
       name: 'Aprons',
       selected: selectedTab === 'Aprons',
       icon: <IoShirtOutline className="mr-0 h-6 w-6 sm:mr-4" />,
+    },
+    {
+      name: 'Potholders',
+      selected: selectedTab === 'Potholders',
+      icon: <GiCookingGlove className="mr-0 h-6 w-6 sm:mr-4" />,
     },
   ];
 

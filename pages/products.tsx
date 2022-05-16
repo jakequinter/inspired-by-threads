@@ -307,6 +307,52 @@ const Product: NextPage = () => {
           />
         </section>
       )}
+
+      {selectedTab === 'Potholders' && (
+        <section className="rounded-[40px] bg-white p-8 shadow-lg md:p-16">
+          <h2 className="mb-2 text-4xl font-medium text-slate-900">
+            Memory potholders
+          </h2>
+          <p className="mb-8">
+            Inspired by Threads makes custom handprint potholders! I have been
+            making these for my friends and family for years and I am excited to
+            add them to the line of custom items I make. Potholders are a great
+            gift for just about everyone! Even if the person doesn&apos;t like
+            to cook, they most likely have a kitchen.
+          </p>
+
+          <h3 className="mb-2 text-2xl font-medium text-slate-900">About</h3>
+          <p className="mb-8">
+            Potholders are made with 100% cotton thread, fabric, and batting. I
+            prefer to use denim on the back as it is both durable and heavy
+            weight. The front can also be denim, or it can be whatever color
+            duck cloth you would like. Duck cloth is a 100% heavy weight canvas.
+            If you would prefer to have an all duck cloth potholder I can do
+            that too.
+          </p>
+
+          <h3 className="mb-2 text-2xl font-medium text-slate-900">Pricing</h3>
+          <p className="mb-2">
+            Base price is $20 per potholder including one hand, each additional
+            hand per potholder is $5. If duck cloth is used it is an additional
+            $2 per side of the potholder. Base price includes denim on both
+            sides.
+          </p>
+          <p className="mb-8">
+            If you have any further questions, or would like a more detailed
+            estimate, please
+            <Link href="/contact" passHref>
+              <a>
+                <span className="cursor-pointer text-blue-500 underline hover:opacity-80">
+                  {' '}
+                  send me an email
+                </span>
+                .
+              </a>
+            </Link>
+          </p>
+        </section>
+      )}
     </Container>
   );
 };
