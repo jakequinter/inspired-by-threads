@@ -51,7 +51,7 @@ export default function Cards() {
     <div className="mx-auto mb-24 max-w-5xl md:mb-60">
       <h2 className="mb-4 text-3xl font-semibold text-neutral-900 sm:text-4xl lg:text-left lg:text-5xl">
         Whatever you want...
-        <p className="text-teal-600">Preserve it</p>
+        <p className="text-violet-600">Preserve it</p>
       </h2>
 
       <div className="mb-24 grid grid-cols-1 items-center gap-4 sm:grid-cols-2 md:mb-60 lg:grid-cols-3">

@@ -57,6 +57,21 @@ const galleryData = [
       { id: 2, path: '/images/gallery/orange-sweatshirt/pillow1.jpg' },
     ],
   },
+  {
+    id: 8,
+    images: [
+      { id: 1, path: '/images/gallery/abby-potholder/potholder1.jpg' },
+      { id: 2, path: '/images/gallery/abby-potholder/potholder2.jpg' },
+    ],
+  },
+  {
+    id: 9,
+    images: [
+      { id: 1, path: '/images/gallery/badger-blanket/supplies.jpg' },
+      { id: 2, path: '/images/gallery/badger-blanket/shirts.jpg' },
+      { id: 3, path: '/images/gallery/badger-blanket/blanket.jpg' },
+    ],
+  },
 ];
 
 export default galleryData;

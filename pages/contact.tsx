@@ -76,7 +76,7 @@ export default function Contact() {
               <div className="mt-1">
                 <input
                   type="text"
-                  className="block w-full rounded-md border-slate-200 py-3 px-4 shadow-sm focus:border-teal-600 focus:ring-0"
+                  className="block w-full rounded-md border-slate-200 py-3 px-4 shadow-sm focus:border-violet-600 focus:ring-0"
                   {...register('firstName', { required: true })}
                 />
                 {errors.firstName && (
@@ -93,7 +93,7 @@ export default function Contact() {
               <div className="mt-1">
                 <input
                   type="text"
-                  className="block w-full rounded-md border-slate-200 py-3 px-4 shadow-sm focus:border-teal-600 focus:ring-0"
+                  className="block w-full rounded-md border-slate-200 py-3 px-4 shadow-sm focus:border-violet-600 focus:ring-0"
                   {...register('lastName', { required: true })}
                 />
                 {errors.lastName && (
@@ -113,7 +113,7 @@ export default function Contact() {
               <div className="mt-1">
                 <input
                   type="email"
-                  className="block w-full rounded-md border-slate-200 py-3 px-4 shadow-sm focus:border-teal-600 focus:ring-0"
+                  className="block w-full rounded-md border-slate-200 py-3 px-4 shadow-sm focus:border-violet-600 focus:ring-0"
                   {...register('email', { required: true })}
                 />
                 {errors.email && (
@@ -133,7 +133,7 @@ export default function Contact() {
               <div className="mt-1">
                 <textarea
                   rows={8}
-                  className="block w-full rounded-md border border-slate-200 py-3 px-4 shadow-sm focus:border-teal-600 focus:ring-0"
+                  className="block w-full rounded-md border border-slate-200 py-3 px-4 shadow-sm focus:border-violet-600 focus:ring-0"
                   {...register('message', { required: true })}
                 />
                 {errors.message && (
@@ -147,7 +147,7 @@ export default function Contact() {
 
           <button
             type="submit"
-            className="contactButtonShadow inline-flex w-full items-center justify-center rounded-md border border-transparent bg-teal-600 py-2.5 text-base font-medium text-white shadow-sm hover:bg-teal-700 focus:outline-none focus:ring-0"
+            className="contactButtonShadow inline-flex w-full items-center justify-center rounded-md border border-transparent bg-violet-600 py-2.5 text-base font-medium text-white shadow-sm hover:bg-violet-700 focus:outline-none focus:ring-0"
           >
             Let&apos;s talk
           </button>

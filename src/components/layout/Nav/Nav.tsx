@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 import * as Popover from '@radix-ui/react-popover';
 
@@ -19,7 +20,7 @@ const NavLink = ({ href, text, isMobile = false }: NavLinkProps) => {
       <a
         className={`${
           isActive
-            ? 'text-teal-600 hover:text-teal-600'
+            ? 'text-violet-600 hover:text-violet-600'
             : 'hover:text-slate-500'
         } ${
           isMobile
@@ -36,9 +37,17 @@ const NavLink = ({ href, text, isMobile = false }: NavLinkProps) => {
 
 export default function Nav() {
   return (
-    <nav className="mx-auto flex max-w-screen-lg justify-between px-4 py-4 lg:px-0">
+    <nav className="mx-auto flex max-w-screen-lg items-center justify-between px-4 py-4 lg:px-0">
       <div>
-        <Link href="/">Logo</Link>
+        <Link href="/" passHref>
+          <Image
+            className="cursor-pointer"
+            src="/images/logo.png"
+            height="60"
+            width="50"
+            alt="Inspired by Threads logo"
+          />
+        </Link>
       </div>
       <div className="hidden space-x-8 sm:block">
         <NavLink href="/products" text="Products" />

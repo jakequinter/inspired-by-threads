@@ -58,7 +58,7 @@ const Home: NextPage = () => {
           <div>
             <h2 className="mb-4 text-3xl font-semibold text-neutral-900 sm:text-4xl lg:text-left lg:text-5xl">
               Hand-crafted and sewn pieces{' '}
-              <span className="text-teal-600">designed for you.</span>
+              <span className="text-violet-600">designed for you.</span>
             </h2>
             <p className="mt-2">
               Maybe you want to preserve your wedding dress or your
@@ -159,7 +159,7 @@ const Home: NextPage = () => {
           <div className="order-first md:order-last">
             <h2 className="mb-4 text-3xl font-semibold text-neutral-900 sm:text-4xl lg:text-left lg:text-5xl">
               Memory items made by someone{' '}
-              <span className="text-teal-600">born to do this.</span>
+              <span className="text-violet-600">born to do this.</span>
             </h2>
             <p className="mt-2">
               One of the many gifts God has given me is sewing. I have been

@@ -14,13 +14,13 @@ body {
 .jumbotron {
   background: radial-gradient(
     41.38% 68.65% at 36.49% 49.91%,
-    #ccfbf1 37.52%,
+    #ddd6fe 37.52%,
     #f1f5f9 100%
   );
 }
 
 .homepageCallout {
-  background: linear-gradient(89.85deg, #ccfbf1 -4.16%, #0d9488 102.59%);
+  background: linear-gradient(89.85deg, #ede9fe -4.16%, #7c3aed 102.59%);
 }
 
 .howItWorksShadow {
@@ -112,7 +112,7 @@ body {
 
          
 .btn-grad {
-  background-image: linear-gradient(to right, #115e59 0%, #0d9488  51%, #115e59  100%);
+  background-image: linear-gradient(to right, #7c3aed 0%, #a78bfa  51%, #7c3aed  100%);
   transition: 0.5s;
   background-size: 200% auto;
 }

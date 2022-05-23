@@ -45,7 +45,7 @@ export default function Tabs({ selectedTab, setSelectedTab }: Props) {
             >
               {tab.selected ? (
                 <motion.div
-                  className="absolute left-0 right-0 -z-10 h-8 rounded-full bg-teal-100"
+                  className="absolute left-0 right-0 -z-10 h-8 rounded-full bg-violet-100"
                   layoutId="tab"
                   transition={{
                     layout: {
